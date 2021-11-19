@@ -1,0 +1,16 @@
+.pagination { 
+    display: flex; 
+    justify-content: center;
+    flex-direction: column;
+}
+
+.number {
+    display: flex;
+    margin: 5px;
+}
+
+.pagina {
+    background-color: rgb(19, 11, 13);
+    font-size: 5px;
+    cursor: pointer;
+}
