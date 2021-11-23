@@ -60,7 +60,7 @@ export default function Home() {
         <div className="barra">
           <Link to="/character">Crear Personaje</Link>
           <h1>BREAKING BAD</h1>
-          <button
+          <button className="boton"
             onClick={(e) => {
               handleClick(e);
             }}

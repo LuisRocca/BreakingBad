@@ -1,0 +1,37 @@
+
+
+.contenedor-create {
+   
+    background-image: url("https://c.wallhere.com/photos/c3/84/breaking_bad_series_protection_mask_glasses_art_drawing-584919.jpg!d");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    padding-bottom: 295px;
+    padding-top: 1px;
+}
+
+.separador {
+    margin: 16px;
+}
+
+.detail a {
+    padding: 10px;
+    height: 20px;
+}
+
+.submit{
+    color: #ffff;
+    background-color: #333;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 15%;
+    transition: background-color 100ms ease, font-weight 10ms ease;;
+    outline: none;
+    cursor: pointer;
+    margin-left: 432px;
+    margin-top: 50px;    
+}
+
+.submit:hover{
+    font-weight: bold;
+    background-color: #22933f;
+}

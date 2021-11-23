@@ -20,7 +20,7 @@ function rootReducer(state = initialState, action) {
             return {
                 ...state,
                 characters: action.payload,
-                allCharacters: action.payload
+                allCharacters: action.payload,
             }
         case BYNAME:
             return {

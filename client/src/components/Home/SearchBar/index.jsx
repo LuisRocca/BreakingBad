@@ -22,7 +22,7 @@ function SearchBar() {
         <div>
             <input type='text' placeholder='Buscar...'
             onChange={e => handleChange(e)}></input>
-            <button type='submit' onClick={e => handleSubmit(e)}>Buscar</button>
+            <button type='submit' className="boton" onClick={e => handleSubmit(e)}>Buscar</button>
         </div>
     )
 };

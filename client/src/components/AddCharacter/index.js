@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { postCharacter, getOccupations } from '../../actions/index.jsx';
 import { useDispatch, useSelector } from 'react-redux';
+import './addCharacter.css'
 
 function AddCharacter() {
     
@@ -15,7 +16,7 @@ function AddCharacter() {
         status: '',
         occupation: []
     });
-
+    console.log(input)
     function handleChange(e) {
         setInput({
             ...input,
@@ -58,34 +59,35 @@ function AddCharacter() {
 
     useEffect(() => {
         dispatch(getOccupations());
-    }, [dispatch])
+    }, [])
 
     return(
-        <div>
+        <div className="contenedor-create">
+        <div className='detail' >
             <Link to='/characters'>
-                <button>Volver</button>
+                Volver
             </Link>
             <h1>Crea tu personaje</h1>
             <form onSubmit={e => {handleSubmit(e)}}>
-                <div>
+                <div className="separador" >
                     <label>Nombre:</label>
                     <input type='text' value={input.name} name='name'
                      onChange={e => handleChange(e)}>  
                     </input>
                 </div>
-                <div>
+                <div className="separador">
                     <label>nickName:</label>
                     <input type='text' value={input.nickName} name='nickName'
                      onChange={e => handleChange(e)}>  
                     </input>
                 </div>
-                <div>
+                <div className="separador" >
                     <label>BirthDay:</label>
                     <input type='text' value={input.birthday} name='birthday'
                      onChange={e => handleChange(e)}>  
                     </input>
                 </div>
-                <div>
+                <div className="separador" >
                     <label>Image:</label>
                     <input type='text' value={input.image} name='image'
                      onChange={e => handleChange(e)}>  
@@ -98,7 +100,7 @@ function AddCharacter() {
                     <label>
                         <input type='checkbox' name='Alive' value='Alive'
                         onChange={e => handleCheck(e)}>
-                    </input>Alive</label>
+                    </input>  Alive </label>
                     <label>
                         <input type='checkbox' name='Deceased' value='Deceased'
                         onChange={e => handleCheck(e)}>
@@ -114,12 +116,13 @@ function AddCharacter() {
                             <option value={i.name}>{i.name}</option>
                         ))
                     }
-                    <ul>
+                </select>
+                   <ul>
                         <li>{input.occupation.map(i => i + ", ")}</li>
                     </ul>
-                </select>
-                <button type='submit'>Crear Personaje</button>
+                <button className="submit" type='submit'>Crear Personaje</button>
             </form>
+        </div>
         </div>
     );
 };
